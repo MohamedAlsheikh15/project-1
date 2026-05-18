@@ -1,0 +1,995 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 4000px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(217, 99, 3, 0.726);
+    z-index: 10;
+
+
+    padding-top: 5px;
+}
+
+.fa-house {
+    margin-top: 10px;
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    padding-left: 25px;
+}
+
+.header [type="text"] {
+    margin-top: 5px;
+    float: left;
+    width: 240px;
+    height: 30px;
+    background-color: rgb(250, 250, 252);
+    border-radius: 20px;
+    margin-left: 25px;
+    border: none;
+
+}
+
+.fa-magnifying-glass {
+    margin-top: 14px;
+    float: left;
+    font-size: 15px;
+    margin-left: -235px;
+}
+
+.header-links {
+    margin-top: 13px;
+    list-style: none;
+    float: right;
+}
+
+.header-links li {
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.header-links li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.header-links li a:after,
+.box ul li a:hover::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: blue;
+    opacity: 0;
+}
+
+.header-links li a:hover:after,
+.box ul li a:hover::after {
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.list-box {
+    position: relative;
+    display: inline-block;
+}
+
+.box {
+    position: absolute;
+    width: 150px;
+    height: 130px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    right: -50px;
+    top: 20px;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity 0.5s;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.box li a {
+    color: rgba(217, 99, 3, 0.726);
+    text-decoration: none;
+    display: block;
+    padding: 10px 0px;
+    text-align: center;
+
+
+}
+
+.box li {
+    list-style: none;
+
+}
+
+.list-box:hover .box,
+.box:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ************************ /header ********************************* */
+.hero {
+    margin-top: 50px;
+    height: 100vh;
+    background-color: rgba(217, 99, 3, 0.178);
+    background-image: url("../images/photo-1511920170033-f8396924c348.avif");
+    background-position: top center;
+    background-size: cover;
+    text-align: center;
+    color: #000000;
+    padding: 100px 20px;
+}
+
+.hero-overlay {
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(101, 90, 82, 0.4);
+
+
+
+}
+
+.hero h1 {
+    margin-top: 30px;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.hero p {
+
+    opacity: 0.5;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: rgba(217, 99, 3, 0.726);
+    color: #fff;
+    border: none;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+.hero button:hover {
+    background-color: rgba(217, 99, 3, 0.9);
+}
+
+/* ************* hero ************** */
+.welcome {
+
+    height: 100vh;
+
+}
+
+.icon1 {
+    font-size: 50px;
+    color: rgba(217, 99, 3, 0.726);
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background-color: rgba(217, 99, 3, 0.726);
+    margin: 0 auto 20px auto;
+}
+
+.welcome .conter {
+    margin: 100px auto;
+    overflow: auto;
+
+}
+
+.welcome .conter div {
+    position: relative;
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    border-radius: 10px;
+    margin-left: 8%;
+    width: 23%;
+    height: 280px;
+    float: left;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome .conter div h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.welcome .conter div p {
+    opacity: 0.5;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.welcome .conter div a {
+    background-color: rgb(217, 99, 3);
+    color: #ffffff;
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.welcome .conter div a:hover {
+    background-color: rgba(217, 99, 3, 0.53);
+    color: black;
+}
+
+.welcome .conter div::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(217, 99, 3, 0.178);
+    opacity: 0;
+    z-index: -1;
+}
+
+.welcome .conter div:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+
+}
+
+/* ------------ welcome ------------ */
+
+.features {
+    height: 100vh;
+    background-color: rgba(217, 99, 3, 0.178);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.Card-set {
+    margin-top: 50px;
+    overflow: auto;
+
+}
+
+.Card-set .card {
+    overflow: hidden;
+    position: relative;
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    border-radius: 10px;
+    margin-left: 8%;
+    width: 23%;
+    height: 270px;
+    float: left;
+    text-align: center;
+
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    visibility: hidden;
+
+
+}
+
+.card-overlay h2 {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.card-overlay p {
+    opacity: 0.7;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.card-overlay i {
+    margin-top: 40px;
+    font-size: 25px;
+    margin-right: 10px;
+    color: rgba(217, 99, 3, 0.726);
+    background-color: #fff;
+    padding: 10px;
+    padding-right: 30px;
+    border-radius: 2px;
+    text-align: center;
+
+}
+
+.card:hover .card-overlay {
+
+    visibility: visible;
+    transition: 0.5s;
+
+}
+
+/* -------------- features -------------- */
+
+.offer {
+    height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.offer-container1 {
+    margin-top: 50px;
+    overflow: auto;
+
+}
+
+.offer-container2 {
+    margin-top: 50px;
+    overflow: auto;
+
+}
+
+.offer-container1 div,
+.offer-container2 div {
+    position: relative;
+
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    border-radius: 10px;
+    margin-left: 11%;
+    width: 20%;
+    height: 220px;
+    float: left;
+    text-align: left;
+    padding: 20px;
+}
+
+.offer .icon1 {
+    font-size: 30px;
+    position: absolute;
+    top: 22px;
+    left: 7px;
+
+}
+
+.offer-container1 div h3,
+.offer-container2 div h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    padding-left: 30px;
+
+}
+
+.offer-container1 div p,
+.offer-container2 div p {
+    opacity: 0.35;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.offer-container1 div:hover p,
+.offer-container2 div:hover p {
+    opacity: 1;
+
+}
+
+.offer-container1 div:hover h3,
+.offer-container2 div:hover h3 {
+    color: rgb(255, 115, 0);
+
+}
+
+.offer-container1 div::after,
+.offer-container2 div::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(217, 99, 3, 0.178);
+    opacity: 0;
+    z-index: -1;
+}
+
+.offer-container1 div:hover::after,
+.offer-container2 div:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+
+}
+
+/* ******************* offer ******************* */
+.chooseus {
+    position: relative;
+    height: 100vh;
+    text-align: left;
+    padding: 0px 150px;
+}
+
+.chooseus .line {
+    width: 70px;
+    margin: -15px 0px 50px 5px;
+}
+
+.chooseus div {
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+.chooseus h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.chooseus p {
+    opacity: 0.5;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.chooseus i {
+    font-size: 20px;
+    color: rgba(217, 99, 3, 0.726);
+    margin-left: 30px;
+    position: absolute;
+    top: 1px;
+    left: -70px;
+}
+
+.chooseus .img {
+    position: absolute;
+    top: -100px;
+    right: 0;
+
+}
+
+.chooseus .img img {
+
+    border-radius: 10px;
+}
+
+.chooseus .img .circles {
+    position: absolute;
+    top: 465px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.chooseus .img .circles div {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(169, 167, 166, 0.726);
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.chooseus .img .circles .circle {
+    background-color: rgba(217, 99, 3, 0.726);
+}
+
+/* ************** chooseus ************************** */
+.statistics {
+    height: 100vh;
+    background-color: rgba(217, 99, 3, 0.178);
+    background-image: url("../images/image.png");
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 130px 20px;
+}
+
+.statistics-container {
+    width: 70%;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.statistics-container div {
+    color: #ffffff;
+    position: relative;
+    margin-left: 5%;
+    width: 20%;
+    height: 220px;
+    float: left;
+    text-align: center;
+}
+
+.sec6-item-icon {
+    font-size: 50px;
+    color: rgb(255, 115, 0);
+
+
+}
+
+/* ******************* pricing ******************* */
+.pricing {
+    background-color: white;
+    margin-top: -350px;
+    height: 100vh;
+    text-align: center;
+    padding: 150px 20px;
+
+}
+
+.pricing-container {
+    width: 90%;
+    margin-top: 50px;
+    overflow: auto;
+    margin: auto;
+
+
+}
+
+.pricing-card {
+    position: relative;
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    border-radius: 10px;
+    margin-left: 8%;
+    height: 350px;
+    width: 22%;
+    float: left;
+
+
+}
+
+.pricing-card h3 {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.pricing-card .price {
+    height: 100px;
+    width: 100px;
+    padding-top: 20px;
+    margin: 20px 95px;
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    border-radius: 50%;
+}
+
+.pricing-card .price p {
+    font-size: 35px
+}
+
+.pricing-card ul {
+    font-size: 13px;
+    list-style: none;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.pricing-container div a {
+    background-color: rgb(240, 234, 228);
+    color: #000000;
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 6px 40px;
+}
+
+.pricing-card:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(217, 99, 3);
+    opacity: 0;
+    z-index: 0;
+}
+
+
+.pricing-card:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.pricing-card:hover .price {
+    background-color: rgba(217, 99, 3, 0.726);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.pricing-card:hover h3 {
+    color: rgb(255, 115, 0);
+    transition: 0.5s;
+}
+
+/* ************ pricing ************ */
+.parson {
+    padding: 100px 20px;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(217, 99, 3, 0.178);
+    background-image: url(../images/parson.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.parson-container {
+    width: 90%;
+    overflow: auto;
+    margin: auto;
+}
+
+.parson1 {
+    position: relative;
+
+    margin-left: 50px;
+    height: 350px;
+    width: 45%;
+    float: left;
+}
+
+.parson1 img {
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.parson-info {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    text-align: left;
+}
+
+.parson-info h3 {
+    font-size: 33px;
+
+    color: #fff;
+}
+
+.parson-info h4 {
+    font-size: 25px;
+    color: rgb(255, 115, 0);
+    margin-bottom: 25px;
+
+}
+
+.parson-info p {
+    font-size: 16px;
+    color: #000000;
+    margin-left: -150px;
+}
+
+/* ***************************************** parson ******************************** */
+.team {
+    background-color: white;
+    margin-top: -350px;
+    padding: 100px 20px;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.team-container {
+    width: 90%;
+    overflow: auto;
+    margin: auto;
+}
+
+.team-item {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 330px;
+    background-color: #dbcdcda8;
+    border-radius: 10px;
+    padding: 18px 13px;
+    text-align: center;
+}
+
+.team-item2 {
+    margin: 0 5%;
+}
+
+.team-img {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.team-img img {
+    width: 100%;
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.team-item:hover .team-overlay {
+    visibility: visible;
+
+
+}
+
+.team-overlay a {
+    background-color: #5070b3;
+    color: white;
+    font-size: 25px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+}
+
+.team-info-title {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.team-info-p {
+    opacity: 0.5;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.team-item:hover .team-info-p {
+    opacity: 1;
+    transition: 0.25s;
+}
+
+.team-item:hover .team-info-title {
+    color: rgb(255, 115, 0);
+    transition: 0.25s;
+}
+
+.team-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(217, 99, 3, 0.555);
+    opacity: 0.5;
+}
+
+.team-item:hover::after {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+/* ****************************** team ****************************** */
+.news {
+    height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.news-container {
+    width: 90%;
+    margin-top: 50px;
+    overflow: auto;
+    margin: auto;
+}
+
+.news-item {
+    position: relative;
+    border: solid 2px rgba(217, 99, 3, 0.726);
+    border-radius: 10px;
+    margin-left: 3%;
+    width: 30%;
+    height: 460px;
+    float: left;
+    text-align: center;
+}
+
+.news-item img {
+    margin-top: 15px;
+    width: 76%;
+    height: 240px;
+    border-radius: 10px;
+}
+
+.news-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.news-links {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.news-links a {
+    color: rgba(217, 99, 3, 0.726);
+    font-size: 20px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.news-links ul {
+    list-style: none;
+}
+
+.news-links ul li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.news-info h3 {
+    font-size: 25px;
+    margin: 10px auto;
+}
+
+.news-info p {
+    opacity: 0.5;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn {
+
+    color: #ff8400;
+
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.news-item:after {
+    position: absolute;
+    content: " ";
+    height: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(217, 99, 3, 0.555);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.news-item:hover:after {
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
+
+
+}
+
+.news-item:hover .news-info h3 {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.news-item:hover .news-info p {
+    opacity: 1;
+    color: #ff8400;
+}
+
+/* ****************************** /news ********************** */
+.footer {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(213, 140, 81, 0.49);
+}
+
+.footer img {
+
+    border-radius: 10px;
+}
+
+.footer-icon {
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 10px;
+
+}
+
+.footer-icon li {
+    margin-left: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #f9b46bd8;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    padding-top: 7.5px;
+}
+
+.iconf {
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+}
+
+.footer-icon ul li:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f9b46bd8;
+    opacity: 0.5;
+    transition: 0.5s;
+
+
+}
+
+.footer-icon ul li:hover {
+    transition: 0.5s;
+    background-color: rgb(255, 145, 0);
+
+}
+.footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+
+}
